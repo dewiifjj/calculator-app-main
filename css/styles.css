@@ -1,0 +1,329 @@
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'League Spartan', sans-serif;
+  width:100%;
+  max-width: 1440px;
+  background-color: hsl(222, 26%, 31%);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h3 {
+  margin: 0;
+  color:#fff;
+}
+
+.toggle {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+}
+
+.right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.toggle p{
+  margin:0 0 0 16px;
+  color:#fff;
+  padding: 0 4px;
+}
+
+.control{
+  padding: 5px 0;
+  display: flex;
+  width: 140px;
+  align-items: center;
+  justify-content: space-between;
+  float: right;
+  font-weight: 700;
+  color:#fff;
+}
+
+.control p{
+  font-size: 12px;
+  margin: 0 10px 0 0;
+  height: fit-content;
+}
+
+.switch {
+  height: 12px;
+  width: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  background-color: hsl(223, 31%, 20%);
+  border-radius: 50px;
+  padding: 5px 0;
+  position: relative;
+  cursor: pointer;
+}
+
+.switch-radios{
+  position: relative;
+}
+
+input[type = "radio"]:first-of-type{
+  right: 22px;
+}
+
+input[type = "radio"]:nth-of-type(2){
+  right: -10px;
+}
+
+input[type= "radio"]:last-of-type{
+  right: -42px;
+}
+
+body.one{
+  background-color: hsl(222, 26%, 31%);
+}
+
+body.two{
+  background-color: hsl(0, 0%, 90%);
+}
+
+body.two .btn, body.two .switch {
+  background-color: hsl(0, 5%, 81%);
+}
+
+body.two #screen{
+  background-color: hsl(0, 0%, 93%);
+}
+
+body.two button{
+  background-color:  hsl(45, 7%, 89%);
+  box-shadow: 0px 3px 0px 0px hsl(35, 11%, 61%);
+}
+
+body.two button:hover {
+  background-color: #fff;
+}
+
+body.two .equal {
+  background-color: hsl(25, 98%, 40%);
+  box-shadow: 0px 3px 0px 0px hsl(25, 99%, 27%);
+}
+
+body.two .ball{
+  background-color: hsl(25, 98%, 40%);
+}
+
+body.two .del, body.two .reset {
+  background-color: hsl(185, 42%, 37%);
+  box-shadow: 0px 3px 0px 0px hsl(185, 58%, 25%);
+
+}
+
+body.two .reset:hover, body.two .del:hover {
+  background-color: hsl(185, 34%, 49%);
+}
+
+body.two .equal:hover {
+  background-color:hsl(25, 85%, 55%) ;
+}
+
+body.two h3, body.two p, body.two .num, body.two #screen{
+  color:hsl(60, 10%, 19%);
+  font-weight: 700;
+}
+
+body.three{
+  background-color: hsl(268, 75%, 9%);
+}
+
+body.three .btn, body.three #screen, body.three .switch{
+  background-color: hsl(268, 71%, 12%);
+}
+
+body.three button {
+  background-color:  hsl(268, 47%, 21%);
+  box-shadow: 0px 3px 0px 0px hsl(290, 70%, 36%);
+}
+
+body.three button:hover {
+  background-color:  hsl(268, 34%, 39%);
+}
+
+body.three .equal {
+  background-color: hsl(176, 100%, 44%);
+  box-shadow: 0px 3px 0px 0px hsl(177, 92%, 70%);
+}
+
+body.three .equal:hover{
+  background-color: hsl(176, 92%, 63%);
+}
+
+body.three .ball{
+  background-color: hsl(176, 100%, 44%);
+}
+
+body.three .del, body.three .reset {
+  background-color: hsl(281, 89%, 26%);
+  box-shadow: 0px 3px 0px 0px hsl(285, 91%, 52%);
+}
+
+body.three .del:hover, body.three .reset:hover {
+  background-color: hsl(281, 56%, 42%);
+}
+
+body.three h3, body.three p, body.three .num, body.three #screen{
+  color:hsl(52, 100%, 62%);
+  font-weight: 700;
+}
+
+body.three .equal {
+  color:hsl(198, 20%, 13%);
+}
+
+
+input[type="radio"]{
+  position:absolute;
+  top:-30px;
+  right:-30px;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.ball{
+  background: hsl(6, 63%, 50%);
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  position: absolute;
+  left: 4px;
+  top: 3px;
+  transition: all .5s ease;
+}
+
+.screen {
+  width: 455px;
+}
+
+#screen {
+  width: 100%;
+  height: 100px;
+  background-color:hsl(224, 36%, 15%) ;
+  text-align: right;
+  font-size: 42px;
+  color:#fff;
+  font-weight: 700;
+  margin-top:10px;}
+
+input  {
+  border: none;
+}
+
+button {
+  font-weight: 700;
+  width: 92px;
+  padding:  7px 15px;
+  outline: none;
+  cursor: pointer;
+  border: 0;
+  border-radius: 5px;
+  background-color: hsl(30, 25%, 89%);
+  box-shadow: 0px 3px 0px 0px hsl(28, 16%, 65%);
+  margin: 10px 10px;
+}
+
+button:hover {
+  background-color: #fff;
+}
+
+.btn {
+  display: flex;
+  width:450px;
+  flex-flow: wrap;
+  background-color: hsl(223, 31%, 20%);
+  padding: 10px 5px;
+  margin: 15px 0;
+}
+
+.reset, .equal {
+  width: 205px;
+  padding:  18px 15px;
+}
+
+.reset, .del {
+  box-shadow: 0px 3px 0px 0px hsl(224 28% 35%);
+  background-color: hsl(225, 21%, 49%) ;
+  color: #fff;
+ font-size: 18px;
+}
+
+.reset:hover, .del:hover {
+  background-color: hsl(225, 32%, 68%)
+}
+
+.equal:hover {
+  background-color: hsl(6, 81%, 61%);
+}
+
+.equal {
+  box-shadow: 0px 3px 0px 0px hsl(6 70% 34%);
+  background-color: hsl(6, 63%, 50%) ;
+  color: #fff;
+  font-size: 18px;
+}
+
+.num {
+  font-size: 32px;
+  color:hsl(222, 26%, 31%);
+}
+
+
+
+/* mobile screen */
+
+@media screen and (max-width:576px){
+  body{
+    box-sizing: border-box;
+    width:100vw;
+    overflow-y: hidden;
+  }
+
+  main{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin:0;
+    padding:0;
+  }
+
+  .screen{
+    width: 305px; 
+  }
+
+  #screen{
+    width:100%;
+    border-radius: 10px;
+  }
+
+  .title {
+    width: 305px;
+  }
+
+  .btn {
+    width: 305px;
+    margin-top:20px;
+    border-radius: 10px;
+  }
+
+  button{
+    width:55px;
+    padding: 5px;
+  }
+
+  .reset, .equal{
+    width:130px;
+  }
+}
